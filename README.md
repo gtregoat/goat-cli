@@ -14,10 +14,11 @@ You need one thing from the owner: an invite code. Then:
 
 ```sh
 curl -fsSL https://github.com/gtregoat/goat-cli/releases/latest/download/install.sh | sh
-~/.local/bin/goat onboard <code>
+~/.local/bin/goat onboard        # paste the code when it asks; add --dev if your invite says so
 ```
 
-`goat onboard` puts `goat` on your PATH, signs you in, accepts the invite, sets up git,
+The code is never a command-line argument (it would stay in your shell history): paste it
+at the prompt or pipe it in. `goat onboard` puts `goat` on your PATH, signs you in, accepts the invite, sets up git,
 clones the repos into `~/goat-workspace` and ends with a green/red checklist saying what,
 if anything, is left. Re-run it any time; `goat onboard --check` only re-checks. The full
 guide is `docs/ONBOARDING.md` in `gtregoat/goat`, which you can read once onboarded.
